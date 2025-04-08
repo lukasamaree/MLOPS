@@ -1,0 +1,9 @@
+stages:
+  preprocess:
+    cmd: python src/preprocessing.py
+    deps:
+      - src/preprocessing.py
+      - data/restaurant_data.csv
+    outs:
+      - data/processed_restaurant_data.csv
+      - data/pipeline_restaurant.pkl
