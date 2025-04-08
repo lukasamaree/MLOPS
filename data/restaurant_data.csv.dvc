@@ -1,0 +1,5 @@
+outs:
+- md5: 26e97d98acbab0ca98194f26e9b9b368
+  size: 910545
+  hash: md5
+  path: restaurant_data.csv
