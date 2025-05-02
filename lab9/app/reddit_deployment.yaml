@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reddit-app
+  template:
+    metadata:
+      labels:
+        app: reddit-app
+    spec:
+      containers:
+      - name: reddit-container
+        image: us-west1-docker.pkg.dev/duedillegence/reddit-repo/reddit-app # ✅ Use full GCP image path
+        ports:
+        - containerPort: 8000

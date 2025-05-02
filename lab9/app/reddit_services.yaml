@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reddit-service
+spec:
+  type: LoadBalancer  # ✅ Expose to the internet
+  selector:
+    app: reddit-app
+  ports:
+    - protocol: TCP
+      port: 80         # Public-facing port
+      targetPort: 8000 # Port your app listens on in the container
